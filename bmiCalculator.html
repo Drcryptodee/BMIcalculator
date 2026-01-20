@@ -152,20 +152,20 @@
 
         if (!inp1) {
             display.innerHTML = 'You need to assign a value to both inputs!'
-        } else if (inp1 <= 0) {
-            display.innerHTML = 'ERROR! Put a realistic number'
-        } else if (inp2 <= 0) {
-            display.innerHTML = 'ERROR! You used an Invalid number for HEIGHT'
         } else if (!inp2) {
             display.innerHTML = 'You need to assign a value to both inputs!'
+        } else if (inp1 <= 0) {
+            display.innerHTML = 'ERROR! Put a realistic number for WEIGHT'
+        } else if (inp2 <= 0) {
+            display.innerHTML = 'ERROR! You used an Invalid number for HEIGHT'
         } else if (formulaResult < 18.5) {
-            display.innerHTML = `Underweight: VALUE: ${formulaResult}. BMI is less than 18.5`
+            display.innerHTML = `Underweight: VALUE: ${formulaResult.toFixed(1)}. BMI is less than 18.5`
         } else if (formulaResult < 25) {
-            display.innerHTML = `Normal weight: VALUE: ${formulaResult}. BMI is 18.5 to 24.9`
+            display.innerHTML = `Normal weight: VALUE: ${formulaResult.toFixed(1)}. BMI is Within 18.5 to 24.9`
         } else if (formulaResult < 30) {
-            display.innerHTML = `Overweight: VALUE: ${formulaResult}. BMI is 25 to 29.9`
+            display.innerHTML = `Overweight: VALUE: ${formulaResult.toFixed(1)}. BMI is Within 25 to 29.9`
         } else {
-            display.innerHTML = `Obese: VALUE: ${formulaResult}. BMI is 30 or more`
+            display.innerHTML = `Obese: VALUE: ${formulaResult.toFixed(1)}. BMI is Within 30 or more`
         }
 
     }
